@@ -4,8 +4,23 @@
     <title>Coding Interview</title>
     <meta charset="utf-8" />
     <script async type="text/javascript" src="{% static 'server/js/index.js' %}"></script>
+    <link rel="stylesheet" type="text/css" href="{% static 'server/css/app.css' %}">
 </head>
 <body>
-    <div id="app">Server</div>
+    <div id="app">
+        <header class="navbar navbar-dark navbar-sticky bg-dark">
+            <div class="container-fluid">
+                <span class="navbar-brand">Foo</span>
+            </div>
+        </header>
+        <main class="container">
+            <noscript>
+                <div class="alert alert-danger mt-3" role="alert">
+                    <h4 class="alert-heading">JavaScript is disabled</h4>
+                    <p class="mb-0">Please enable JavaScript</p>
+                </div>
+            </noscript>
+        </main>
+    </div>
 </body>
 </html>

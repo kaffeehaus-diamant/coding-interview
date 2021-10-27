@@ -6,6 +6,22 @@
             "script": "build",
             "group": "build",
             "label": "npm: build",
+            "detail": "npm run build-css && npm run build-js",
+            "problemMatcher": []
+        },
+        {
+            "type": "npm",
+            "script": "build-css",
+            "group": "build",
+            "label": "npm: build-css",
+            "detail": "sass scss/:server/static/server/css/",
+            "problemMatcher": []
+        },
+        {
+            "type": "npm",
+            "script": "build-js",
+            "group": "build",
+            "label": "npm: build-js",
             "detail": "webpack --node-env development --progress",
             "problemMatcher": [
                 {
@@ -33,9 +49,18 @@
         },
         {
             "type": "npm",
-            "script": "watch",
+            "script": "watch-css",
             "group": "build",
-            "label": "npm: watch",
+            "label": "npm: watch-css",
+            "detail": "sass --watch scss/:server/static/server/css/",
+            "isBackground": true,
+            "problemMatcher": []
+        },
+        {
+            "type": "npm",
+            "script": "watch-js",
+            "group": "build",
+            "label": "npm: watch-js",
             "detail": "webpack --watch --node-env development --progress",
             "isBackground": true,
             "problemMatcher": [

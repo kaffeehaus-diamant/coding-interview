@@ -11,8 +11,29 @@ export default (): void => {
 };
 
 
-class App extends React.Component {
-    public render(): React.ReactNode {
-        return <div>Hello World!</div>
-    }
+function App(): React.ReactElement {
+    return (
+        <React.Fragment>
+            <Header />
+            <Content />
+        </React.Fragment>
+    )
+}
+
+function Header(): React.ReactElement {
+    return (
+        <header className="navbar navbar-dark navbar-sticky bg-dark">
+            <div className="container-fluid">
+                <span className="navbar-brand">Foo</span>
+            </div>
+        </header>
+    );
+}
+
+function Content(): React.ReactElement {
+    return (
+        <main className="container">
+            <h1>Hello World!</h1>
+        </main>
+    );
 }

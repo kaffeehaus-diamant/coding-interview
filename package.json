@@ -9,8 +9,11 @@
     },
     "description": "",
     "scripts": {
-        "build": "webpack --node-env development --progress",
-        "watch": "webpack --watch --node-env development --progress",
+        "build": "npm run build-css && npm run build-js",
+        "build-css": "sass scss/:server/static/server/css/",
+        "build-js": "webpack --node-env development --progress",
+        "watch-css": "sass --watch scss/:server/static/server/css/",
+        "watch-js": "webpack --watch --node-env development --progress",
         "test": "echo \"Error: no test specified\" && exit 1"
     },
     "dependencies": {
