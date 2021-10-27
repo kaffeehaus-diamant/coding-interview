@@ -1,0 +1,45 @@
+{
+    "compileOnSave": true,
+    "compilerOptions": {
+        /* Allow iterating over es6 containers (Map, Set, ...) in the es5 target.
+         * This generates some additional helper functions where necessary.
+         */
+        "downlevelIteration": true,
+        "experimentalDecorators": true,
+        /* Import TypeScript helper functions from the "tslib" package instead
+         * of including them once per file.
+         */
+        "importHelpers": true,
+        "jsx": "react",
+        "lib": ["es6", "dom"],
+        /* Webpack's lazy Loading only works with ES2020 modules.
+         *
+         * From the TypeScript handbook:
+         * > If you are wondering about the difference between ES2015 and ES2020,
+         * > ES2020 adds support for dynamic imports, and import.meta.
+         *
+         * Without ES2020, e.g. just using "commonjs", TypeScript would simply
+         * emit a normal require() call and webpack would have no idea that we
+         * want to lazy load a module.
+         *
+         * see https://stackoverflow.com/questions/49410022/webpack-lazy-loading-with-typescript/49410101#49410101
+         * see https://www.typescriptlang.org/tsconfig#module
+         */
+        "module": "es2020",
+        "moduleResolution": "node",
+        "noEmitOnError": true,
+        "outDir": "client-lib/",
+        "removeComments": true,
+        "preserveConstEnums": true,
+        "sourceMap": true,
+        "strict": true,
+        "target": "es5",
+        "esModuleInterop": true
+    },
+    "include": [
+        "client/**/*"
+    ],
+    "exclude": [
+        "node_modules"
+    ]
+}
