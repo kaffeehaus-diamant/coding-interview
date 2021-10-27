@@ -10,6 +10,7 @@
     "description": "",
     "scripts": {
         "build": "webpack --node-env development --progress",
+        "watch": "webpack --watch --node-env development --progress",
         "test": "echo \"Error: no test specified\" && exit 1"
     },
     "dependencies": {

@@ -1,0 +1,75 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "type": "npm",
+            "script": "build",
+            "group": "build",
+            "label": "npm: build",
+            "detail": "webpack --node-env development --progress",
+            "problemMatcher": [
+                {
+                    "owner": "typescript",
+                    "source": "ts",
+                    "applyTo": "allDocuments",
+                    "fileLocation": "absolute",
+                    "severity": "error",
+                    "pattern": [
+                        {
+                            "regexp": "\\[tsl\\] (ERROR|WARNING) in (.*)?\\((\\d+),(\\d+)\\)",
+                            "severity": 1,
+                            "file": 2,
+                            "line": 3,
+                            "column": 4
+                        },
+                        {
+                            "regexp": "\\s*TS(\\d+):\\s*(.*)$",
+                            "code": 1,
+                            "message": 2
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "npm",
+            "script": "watch",
+            "group": "build",
+            "label": "npm: watch",
+            "detail": "webpack --watch --node-env development --progress",
+            "isBackground": true,
+            "problemMatcher": [
+                {
+                    "owner": "typescript",
+                    "source": "ts",
+                    "applyTo": "allDocuments",
+                    "fileLocation": "absolute",
+                    "severity": "error",
+                    "background": {
+                        "activeOnStart": true,
+                        "beginsPattern": {
+                            "regexp": "^\\d+-\\d+-\\d+T\\d+:\\d+:\\d+(\\.\\d+)?Z? File change detected."
+                        },
+                        "endsPattern": {
+                            "regexp": "^webpack \\S+ compiled"
+                        }
+                    },
+                    "pattern": [
+                        {
+                            "regexp": "\\[tsl\\] (ERROR|WARNING) in (.*)?\\((\\d+),(\\d+)\\)",
+                            "severity": 1,
+                            "file": 2,
+                            "line": 3,
+                            "column": 4
+                        },
+                        {
+                            "regexp": "\\s*TS(\\d+):\\s*(.*)$",
+                            "code": 1,
+                            "message": 2
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
