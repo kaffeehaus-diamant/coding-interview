@@ -6,8 +6,8 @@ Coding Interview
 Required Software
 =================
 
-- `Python >= 3.7 <https://www.python.org/downloads/>`_
-- `Node.js <https://nodejs.org/en/download/>`_
+- `Python >= 3.10 <https://www.python.org/downloads/>`_
+- `Node.js >= 17 <https://nodejs.org/en/download/>`_
 - A text editor of your choice, e.g. `Visual Studio Code <https://code.visualstudio.com>`_
 
 
