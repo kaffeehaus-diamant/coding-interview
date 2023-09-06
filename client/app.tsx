@@ -1,5 +1,5 @@
 import React from "react";
-import ReactDOM from "react-dom";
+import {createRoot} from "react-dom/client";
 
 export default (): void => {
     const container = document.getElementById("app");
@@ -7,7 +7,8 @@ export default (): void => {
         throw new Error("main app container does not exist");
     }
 
-    ReactDOM.render(<App />, container);
+    const root = createRoot(container);
+    root.render(<App />)
 };
 
 
@@ -30,7 +31,7 @@ function Header(): React.ReactElement {
     );
 }
 
-function Content(): React.ReactElement {
+function Content(): React.ReactElement{
     return (
         <main className="container">
             <h1>Hello World!</h1>
