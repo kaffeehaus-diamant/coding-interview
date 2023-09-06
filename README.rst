@@ -60,3 +60,18 @@ and::
     # npm run watch-js
 
 in two separate console windows.
+
+
+Tasks
+===========
+* Create models for Author and Book
+* Authors have a name and rank
+* Books have a name, number of pages and a connection to an author
+* Authors write books, so Author needs to have a connection to Book and for convenience a property "books"
+* Add some authors and their books
+* Under the API endpoint "/api/authors/books" expose all authors with their corresponding books
+
+Optional
+----------
+* Fetch data from endpoint /api/products/ in React
+* Render List of Product names in Frontend Content component
